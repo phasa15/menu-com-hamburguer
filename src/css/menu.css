@@ -1,0 +1,51 @@
+
+input {
+    display: none;
+  }
+  
+  .menu {
+    display: none;
+    width: 65px;
+    height: 60px;
+  }
+
+
+
+/* .header #hamburguer{
+    display: none;
+}
+.header label .menu{
+    display: none;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 30px;
+
+} */
+/* .header label[for="hamburguer"] {
+    display: none;
+} */
+.header label .hamburguer{
+    position: relative;
+    display: block;
+    background-color: black;
+    height: 3px;
+    width: 35px;
+}
+.header label .hamburguer::after, 
+.header label .hamburguer::before{
+    position: absolute;
+    content: "";
+    display: block;
+    background-color: black;
+    height: 3px;
+    width: 35px;
+}
+.header label .hamburguer::after{
+    top: -10px;
+}
+.header label .hamburguer::before{
+    bottom: -10px;
+}
