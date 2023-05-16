@@ -1,51 +1,62 @@
 
-input {
-    display: none;
-  }
-  
-  .menu {
-    display: none;
-    width: 65px;
-    height: 60px;
-  }
-
-
-
-/* .header #hamburguer{
+.header input {
     display: none;
 }
-.header label .menu{
+
+.header .menu{
     display: none;
     height: 50px;
-    width: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    left: 30px;
+    width: 60px;
+}
 
-} */
-/* .header label[for="hamburguer"] {
-    display: none;
-} */
-.header label .hamburguer{
+.header .menu .hamburguer{
     position: relative;
     display: block;
     background-color: black;
-    height: 3px;
+    height: 4px;
     width: 35px;
+    top: 25px;
+    left: 12px;
 }
-.header label .hamburguer::after, 
-.header label .hamburguer::before{
+.header .menu .hamburguer::after, 
+.header .menu .hamburguer::before{
     position: absolute;
     content: "";
     display: block;
     background-color: black;
-    height: 3px;
+    height: 4px;
     width: 35px;
 }
-.header label .hamburguer::after{
+.header .menu .hamburguer::after{
     top: -10px;
 }
-.header label .hamburguer::before{
+.header .menu .hamburguer::before{
     bottom: -10px;
+}
+
+
+@media (max-width: 800px) {
+    .header .menu{
+        display: block;
+    }
+
+    .header .links{
+        display: none;
+    }
+
+    input:checked~.links{
+        display: flex;
+        flex-direction: column;
+    }
+    .header .links{
+        background-color: white;
+        position: absolute;
+        width: 200px;
+        padding: 15px;
+        z-index: 2;
+        right: 0;
+        top: 60px;
+        border-bottom-left-radius: 15px;
+    }
+    
 }
